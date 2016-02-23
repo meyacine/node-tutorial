@@ -8,7 +8,7 @@ var http = require('http');
  * @param result
  */
 var init = function(request, result) {
-    result.writeHead(200);
+    result.writeHead(200, {"Content-Type": "application/json"});
     result.end('Salut tout le monde !');
 }
 var server = http.createServer(init);
